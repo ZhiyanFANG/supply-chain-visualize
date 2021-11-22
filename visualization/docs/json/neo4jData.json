@@ -1,355 +1,566 @@
 {
-    "results": [{
-        "columns": ["user", "entity"],
-        "data": [{
-            "graph": {
-                "nodes": [{
-                    "id": "1",
-                    "labels": ["User"],
-                    "properties": {
-                        "userId": "eisman"
-                    }
-                }, {
-                    "id": "2",
-                    "labels": ["Phone"],
-                    "properties": {
-                        "value": "555-555-5555"
-                    }
-                }, {
-                    "id": "3",
-                    "labels": ["Address"],
-                    "properties": {
-                        "zipCode": "90210",
-                        "country": "US",
-                        "city": "Beverly Hills",
-                        "state": "CA"
-                    }
-                }, {
-                    "id": "4",
-                    "labels": ["BirthDate"],
-                    "properties": {
-                        "value": 1326322800000
-                    }
-                }, {
-                    "id": "5",
-                    "labels": ["Password"],
-                    "properties": {
-                        "value": "123456"
-                    }
-                }, {
-                    "id": "6",
-                    "labels": ["Device"],
-                    "properties": {
-                        "value": "eisman"
-                    }
-                }, {
-                    "id": "7",
-                    "labels": ["SecurityChallengeAnswer"],
-                    "properties": {
-                        "value": "hCxh4LItmWefWg71JiYUaxxFrCRaqQIDEoEbeqHa"
-                    }
-                }, {
-                    "id": "8",
-                    "labels": ["Project"],
-                    "properties": {
-                        "name": "neo4jd3",
-                        "title": "neo4jd3.js",
-                        "description": "Neo4j graph visualization using D3.js.",
-                        "url": "https://eisman.github.io/neo4jd3"
-                    }
-                }, {
-                    "id": "9",
-                    "labels": ["Git"],
-                    "properties": {
-                        "url": "https://github.com/eisman/neo4jd3"
-                    }
-                }, {
-                    "id": "10",
-                    "labels": ["Issues"],
-                    "properties": {
-                        "url": "https://github.com/eisman/neo4jd3/issues"
-                    }
-                }, {
-                    "id": "11",
-                    "labels": ["Github"],
-                    "properties": {
-                        "url": "https://github.com"
-                    }
-                }, {
-                    "id": "12",
-                    "labels": ["Project"],
-                    "properties": {
-                        "name": "neo4j",
-                        "title": "Neo4j",
-                        "description": "Graphs for Everyone",
-                        "url": "http://neo4j.com"
-                    }
-                }, {
-                    "id": "13",
-                    "labels": ["Project"],
-                    "properties": {
-                        "name": "d3",
-                        "title": "D3.js",
-                        "description": "Bring data to life with SVG, Canvas and HTML.",
-                        "url": "https://d3js.org/"
-                    }
-                }, {
-                    "id": "14",
-                    "labels": ["Email"],
-                    "properties": {
-                        "email": "eeisman@gmail.com"
-                    }
-                }, {
-                    "id": "15",
-                    "labels": ["CreditCard"],
-                    "properties": {
-                        "number": "4916928406205705",
-                        "type": "visa"
-                    }
-                }, {
-                    "id": "16",
-                    "labels": ["Options"],
-                    "properties": {}
-                }, {
-                    "id": "17",
-                    "labels": ["Language"],
-                    "properties": {
-                        "lang": "en_us"
-                    }
-                }, {
-                    "id": "18",
-                    "labels": ["Cookie"],
-                    "properties": {
-                        "value": "itgnxe0xmvb1tazaqmkpmfzg8m3ma62qskfwcexc"
-                    }
-                }, {
-                    "id": "19",
-                    "labels": ["Ip"],
-                    "properties": {
-                        "address": "127.0.0.1"
-                    }
-                }, {
-                    "id": "20",
-                    "labels": ["icons"],
-                    "properties": {
-                        "description": "Map node labels to Font Awesome icons",
-                        "type": "object",
-                        "example": {
-                            "Address": "home",
-                            "BirthDate": "birthday-cake",
-                            "Password": "asterisk",
-                            "Phone": "phone",
-                            "User": "user"
-                        },
-                        "deafult": "{}"
-                    }
-                }, {
-                    "id": "21",
-                    "labels": ["zoomIn"],
-                    "properties": {
-                        "description": "Scroll up to zoom in.",
-                        "type": "function"
-                    }
-                }, {
-                    "id": "22",
-                    "labels": ["zoomOut"],
-                    "properties": {
-                        "description": "Scroll down to zoom out.",
-                        "type": "function"
-                    }
-                }, {
-                    "id": "23",
-                    "labels": ["zoomFit"],
-                    "properties": {
-                        "description": "Adjust the graph to the container once it has been loaded.",
-                        "type": "boolean",
-                        "values": [true, false],
-                        "default": false
-                    }
-                }, {
-                    "id": "24",
-                    "labels": ["Api"],
-                    "properties": {}
-                }, {
-                    "id": "25",
-                    "labels": ["Google"],
-                    "properties": {
-                        "url": "https://www.google.com/#q=\"neo4jd3\""
-                    }
-                }],
-                "relationships": [{
-                    "id": "1",
-                    "type": "HAS_PHONE_NUMBER",
-                    "startNode": "1",
-                    "endNode": "2",
-                    "properties": {
-                        "from": 1473581532586
-                    }
-                }, {
-                    "id": "2",
-                    "type": "HAS_ADDRESS",
-                    "startNode": "1",
-                    "endNode": "3",
-                    "properties": {
-                        "from": 1473581532586
-                    }
-                }, {
-                    "id": "3",
-                    "type": "HAS_BIRTH_DATE",
-                    "startNode": "1",
-                    "endNode": "4",
-                    "properties": {
-                        "from": 1473581532586
-                    }
-                }, {
-                    "id": "4",
-                    "type": "HAS_PASSWORD",
-                    "startNode": "1",
-                    "endNode": "5",
-                    "properties": {
-                        "from": 1473581532586
-                    }
-                }, {
-                    "id": "5",
-                    "type": "USED_DEVICE",
-                    "startNode": "1",
-                    "endNode": "6",
-                    "properties": {
-                        "from": 1473581532586
-                    }
-                }, {
-                    "id": "6",
-                    "type": "HAS_SECURITY_ANSWER",
-                    "startNode": "1",
-                    "endNode": "7",
-                    "properties": {
-                        "from": 1473581532586
-                    }
-                }, {
-                    "id": "7",
-                    "type": "DEVELOPES",
-                    "startNode": "1",
-                    "endNode": "8",
-                    "properties": {
-                        "from": 1470002400000
-                    }
-                }, {
-                    "id": "8",
-                    "type": "REPOSITORY",
-                    "startNode": "8",
-                    "endNode": "9",
-                    "properties": {}
-                }, {
-                    "id": "9",
-                    "type": "ISSUES",
-                    "startNode": "8",
-                    "endNode": "10",
-                    "properties": {}
-                }, {
-                    "id": "10",
-                    "type": "HOSTED_ON",
-                    "startNode": "8",
-                    "endNode": "11",
-                    "properties": {}
-                }, {
-                    "id": "11",
-                    "type": "HOSTED_ON",
-                    "startNode": "12",
-                    "endNode": "11",
-                    "properties": {}
-                }, {
-                    "id": "12",
-                    "type": "HOSTED_ON",
-                    "startNode": "13",
-                    "endNode": "11",
-                    "properties": {}
-                }, {
-                    "id": "13",
-                    "type": "HAS_EMAIL",
-                    "startNode": "1",
-                    "endNode": "14",
-                    "properties": {}
-                }, {
-                    "id": "14",
-                    "type": "USED_CREDIT_CARD",
-                    "startNode": "1",
-                    "endNode": "15",
-                    "properties": {}
-                }, {
-                    "id": "15",
-                    "type": "DEPENDS_ON",
-                    "startNode": "8",
-                    "endNode": "12",
-                    "properties": {}
-                }, {
-                    "id": "16",
-                    "type": "DEPENDS_ON",
-                    "startNode": "8",
-                    "endNode": "13",
-                    "properties": {}
-                }, {
-                    "id": "17",
-                    "type": "OPTIONS",
-                    "startNode": "8",
-                    "endNode": "16",
-                    "properties": {}
-                }, {
-                    "id": "18",
-                    "type": "HAS_LANGUAGE",
-                    "startNode": "6",
-                    "endNode": "17",
-                    "properties": {}
-                }, {
-                    "id": "19",
-                    "type": "HAS_COOKIE",
-                    "startNode": "6",
-                    "endNode": "18",
-                    "properties": {}
-                }, {
-                    "id": "20",
-                    "type": "HAS_IP",
-                    "startNode": "6",
-                    "endNode": "19",
-                    "properties": {}
-                }, {
-                    "id": "21",
-                    "type": "ICONS",
-                    "startNode": "16",
-                    "endNode": "20",
-                    "properties": {}
-                }, {
-                    "id": "22",
-                    "type": "ZOOM_IN",
-                    "startNode": "24",
-                    "endNode": "21",
-                    "properties": {}
-                }, {
-                    "id": "23",
-                    "type": "ZOOM_OUT",
-                    "startNode": "24",
-                    "endNode": "22",
-                    "properties": {}
-                }, {
-                    "id": "24",
-                    "type": "ZOOM_FIT",
-                    "startNode": "16",
-                    "endNode": "23",
-                    "properties": {}
-                }, {
-                    "id": "25",
-                    "type": "API",
-                    "startNode": "8",
-                    "endNode": "24",
-                    "properties": {}
-                }, {
-                    "id": "26",
-                    "type": "GOOGLE_SEARCH",
-                    "startNode": "8",
-                    "endNode": "25",
-                    "properties": {}
-                }]
-            }
-        }]
-    }],
-    "errors": []
+  "results": [
+    {
+      "columns": [
+        "user",
+        "entity"
+      ],
+      "data": [
+        {
+          "graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "labels": [
+                  "Dist"
+                ],
+                "properties": {
+                  "Stage Name": "Dist_0001",
+                  "Holding Cost": 130,
+                  "Average Demand": 140.0,
+                  "Demand Std Dev.": 35.0,
+                  "Max Service Time": 0.0,
+                  "Service Level": 0.95,
+                  "Lead Time": [
+                    [
+                      1.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 4322.5
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Dist"
+                ],
+                "properties": {
+                  "Stage Name": "Dist_0002",
+                  "Holding Cost": 40,
+                  "Average Demand": 126.0,
+                  "Demand Std Dev.": 132.3,
+                  "Max Service Time": 0.0,
+                  "Service Level": 0.95,
+                  "Lead Time": [
+                    [
+                      1.0,
+                      0.8
+                    ],
+                    [
+                      2.0,
+                      0.2
+                    ]
+                  ],
+                  "Safety Inventory Cost": 43596.42
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Dist"
+                ],
+                "properties": {
+                  "Stage Name": "Dist_0003",
+                  "Holding Cost": 62,
+                  "Average Demand": 57.0,
+                  "Demand Std Dev.": 51.3,
+                  "Max Service Time": 0.0,
+                  "Service Level": 0.95,
+                  "Lead Time": [
+                    [
+                      4.0,
+                      0.8
+                    ],
+                    [
+                      5.0,
+                      0.1
+                    ],
+                    [
+                      6.0,
+                      0.1
+                    ]
+                  ],
+                  "Safety Inventory Cost": 19417.57
+                }
+              },
+              {
+                "id": "3",
+                "labels": [
+                  "Dist"
+                ],
+                "properties": {
+                  "Stage Name": "Dist_0004",
+                  "Holding Cost": 79,
+                  "Average Demand": 46.0,
+                  "Demand Std Dev.": 45.0,
+                  "Max Service Time": 0.0,
+                  "Service Level": 0.95,
+                  "Lead Time": [
+                    [
+                      4.0,
+                      0.8
+                    ],
+                    [
+                      5.0,
+                      0.2
+                    ]
+                  ],
+                  "Safety Inventory Cost": 21699.33
+                }
+              },
+              {
+                "id": "4",
+                "labels": [
+                  "Manuf"
+                ],
+                "properties": {
+                  "Stage Name": "Manuf_0001",
+                  "Holding Cost": 240,
+                  "Average Demand": 126.0,
+                  "Demand Std Dev.": 132.3,
+                  "Lead Time": [
+                    [
+                      12.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 0.0
+                }
+              },
+              {
+                "id": "5",
+                "labels": [
+                  "Manuf"
+                ],
+                "properties": {
+                  "Stage Name": "Manuf_0002",
+                  "Holding Cost": 235,
+                  "Average Demand": 243.0,
+                  "Demand Std Dev.": 76.69,
+                  "Lead Time": [
+                    [
+                      10.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 0.0
+                }
+              },
+              {
+                "id": "6",
+                "labels": [
+                  "Manuf"
+                ],
+                "properties": {
+                  "Stage Name": "Manuf_0003",
+                  "Holding Cost": 185,
+                  "Average Demand": 126.0,
+                  "Demand Std Dev.": 132.3,
+                  "Lead Time": [
+                    [
+                      10.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 0.0
+                }
+              },
+              {
+                "id": "7",
+                "labels": [
+                  "Manuf"
+                ],
+                "properties": {
+                  "Stage Name": "Manuf_0004",
+                  "Holding Cost": 181,
+                  "Average Demand": 103.0,
+                  "Demand Std Dev.": 68.24,
+                  "Lead Time": [
+                    [
+                      10.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 0.0
+                }
+              },
+              {
+                "id": "8",
+                "labels": [
+                  "Part"
+                ],
+                "properties": {
+                  "Stage Name": "Part_0001",
+                  "Holding Cost": 55,
+                  "Average Demand": 126.0,
+                  "Demand Std Dev.": 132.3,
+                  "Lead Time": [
+                    [
+                      40.0,
+                      0.6
+                    ],
+                    [
+                      50.0,
+                      0.3
+                    ],
+                    [
+                      60.0,
+                      0.1
+                    ]
+                  ],
+                  "Safety Inventory Cost": 9649.38
+                }
+              },
+              {
+                "id": "9",
+                "labels": [
+                  "Part"
+                ],
+                "properties": {
+                  "Stage Name": "Part_0002",
+                  "Holding Cost": 30,
+                  "Average Demand": 369.0,
+                  "Demand Std Dev.": 152.92,
+                  "Lead Time": [
+                    [
+                      30.0,
+                      0.5
+                    ],
+                    [
+                      45.0,
+                      0.5
+                    ]
+                  ],
+                  "Safety Inventory Cost": 8439.74
+                }
+              },
+              {
+                "id": "10",
+                "labels": [
+                  "Part"
+                ],
+                "properties": {
+                  "Stage Name": "Part_0003",
+                  "Holding Cost": 20,
+                  "Average Demand": 369.0,
+                  "Demand Std Dev.": 152.92,
+                  "Lead Time": [
+                    [
+                      50.0,
+                      0.5
+                    ],
+                    [
+                      55.0,
+                      0.4
+                    ],
+                    [
+                      65.0,
+                      0.1
+                    ]
+                  ],
+                  "Safety Inventory Cost": 3724.06
+                }
+              },
+              {
+                "id": "11",
+                "labels": [
+                  "Part"
+                ],
+                "properties": {
+                  "Stage Name": "Part_0004",
+                  "Holding Cost": 55,
+                  "Average Demand": 243.0,
+                  "Demand Std Dev.": 76.69,
+                  "Lead Time": [
+                    [
+                      20.0,
+                      0.5
+                    ],
+                    [
+                      30.0,
+                      0.4
+                    ],
+                    [
+                      40.0,
+                      0.1
+                    ]
+                  ],
+                  "Safety Inventory Cost": 6860.77
+                }
+              },
+              {
+                "id": "12",
+                "labels": [
+                  "Part"
+                ],
+                "properties": {
+                  "Stage Name": "Part_0005",
+                  "Holding Cost": 75,
+                  "Average Demand": 229.0,
+                  "Demand Std Dev.": 148.86,
+                  "Lead Time": [
+                    [
+                      25.0,
+                      0.5
+                    ],
+                    [
+                      35.0,
+                      0.4
+                    ],
+                    [
+                      45.0,
+                      0.1
+                    ]
+                  ],
+                  "Safety Inventory Cost": 18159.54
+                }
+              },
+              {
+                "id": "13",
+                "labels": [
+                  "Trans"
+                ],
+                "properties": {
+                  "Stage Name": "Trans_0001",
+                  "Holding Cost": 30,
+                  "Average Demand": 126.0,
+                  "Demand Std Dev.": 132.3,
+                  "Lead Time": [
+                    [
+                      2.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 0.0
+                }
+              },
+              {
+                "id": "14",
+                "labels": [
+                  "Trans"
+                ],
+                "properties": {
+                  "Stage Name": "Trans_0002",
+                  "Holding Cost": 150,
+                  "Average Demand": 126.0,
+                  "Demand Std Dev.": 132.3,
+                  "Lead Time": [
+                    [
+                      2.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 0.0
+                }
+              },
+              {
+                "id": "15",
+                "labels": [
+                  "Trans"
+                ],
+                "properties": {
+                  "Stage Name": "Trans_0003",
+                  "Holding Cost": 150,
+                  "Average Demand": 103.0,
+                  "Demand Std Dev.": 68.24,
+                  "Lead Time": [
+                    [
+                      2.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 0.0
+                }
+              },
+              {
+                "id": "16",
+                "labels": [
+                  "Trans"
+                ],
+                "properties": {
+                  "Stage Name": "Trans_0004",
+                  "Holding Cost": 25,
+                  "Average Demand": 243.0,
+                  "Demand Std Dev.": 76.69,
+                  "Lead Time": [
+                    [
+                      2.0,
+                      1.0
+                    ]
+                  ],
+                  "Safety Inventory Cost": 14342.03
+                }
+              }
+            ],
+            "relationships": [
+              {
+                "id": "0",
+                "type": "62",
+                "startNode": "4",
+                "endNode": "13",
+                "properties": {
+                  "Service Time": 62
+                }
+              },
+              {
+                "id": "1",
+                "type": "60",
+                "startNode": "5",
+                "endNode": "16",
+                "properties": {
+                  "Service Time": 60
+                }
+              },
+              {
+                "id": "2",
+                "type": "74",
+                "startNode": "6",
+                "endNode": "1",
+                "properties": {
+                  "Service Time": 74
+                }
+              },
+              {
+                "id": "3",
+                "type": "37",
+                "startNode": "7",
+                "endNode": "2",
+                "properties": {
+                  "Service Time": 37
+                }
+              },
+              {
+                "id": "4",
+                "type": "37",
+                "startNode": "7",
+                "endNode": "3",
+                "properties": {
+                  "Service Time": 37
+                }
+              },
+              {
+                "id": "5",
+                "type": "40",
+                "startNode": "8",
+                "endNode": "4",
+                "properties": {
+                  "Service Time": 40
+                }
+              },
+              {
+                "id": "6",
+                "type": "30",
+                "startNode": "9",
+                "endNode": "4",
+                "properties": {
+                  "Service Time": 30
+                }
+              },
+              {
+                "id": "7",
+                "type": "30",
+                "startNode": "9",
+                "endNode": "5",
+                "properties": {
+                  "Service Time": 30
+                }
+              },
+              {
+                "id": "8",
+                "type": "50",
+                "startNode": "10",
+                "endNode": "4",
+                "properties": {
+                  "Service Time": 50
+                }
+              },
+              {
+                "id": "9",
+                "type": "50",
+                "startNode": "10",
+                "endNode": "5",
+                "properties": {
+                  "Service Time": 50
+                }
+              },
+              {
+                "id": "10",
+                "type": "20",
+                "startNode": "11",
+                "endNode": "5",
+                "properties": {
+                  "Service Time": 20
+                }
+              },
+              {
+                "id": "11",
+                "type": "25",
+                "startNode": "12",
+                "endNode": "14",
+                "properties": {
+                  "Service Time": 25
+                }
+              },
+              {
+                "id": "12",
+                "type": "25",
+                "startNode": "12",
+                "endNode": "15",
+                "properties": {
+                  "Service Time": 25
+                }
+              },
+              {
+                "id": "13",
+                "type": "64",
+                "startNode": "13",
+                "endNode": "6",
+                "properties": {
+                  "Service Time": 64
+                }
+              },
+              {
+                "id": "14",
+                "type": "27",
+                "startNode": "14",
+                "endNode": "6",
+                "properties": {
+                  "Service Time": 27
+                }
+              },
+              {
+                "id": "15",
+                "type": "27",
+                "startNode": "15",
+                "endNode": "7",
+                "properties": {
+                  "Service Time": 27
+                }
+              },
+              {
+                "id": "16",
+                "type": "0",
+                "startNode": "16",
+                "endNode": "7",
+                "properties": {
+                  "Service Time": 0
+                }
+              },
+              {
+                "id": "17",
+                "type": "0",
+                "startNode": "16",
+                "endNode": "0",
+                "properties": {
+                  "Service Time": 0
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
 }
