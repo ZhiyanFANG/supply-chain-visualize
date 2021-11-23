@@ -100,15 +100,15 @@ while (current_depth >= 0):
 			if (stage_list[i]['StageType'] != 'Manuf'):
 				stage_list[j]['HoldingCost'] += stage_list[i]['HoldingCost']
 			else:
-				stage_list[j]['HoldingCost'] += stage_list[i]['StageCost']*(1/stage_list[i]['StageCost']/cost_per_sum)
+				stage_list[j]['HoldingCost'] += stage_list[i]['HoldingCost']*(1/stage_list[i]['StageCost']/cost_per_sum)
 	current_depth -= 1
 for j in range (N):
 	if (stage_list[j]['StageType'] == 'Part'):
-		stage_list[j]['HoldingCost'] = stage_list[j]['HoldingCost']*0.05
+		stage_list[j]['HoldingCost'] = round(stage_list[j]['HoldingCost']*0.05,2)
 	elif ((stage_list[j]['StageType'] == 'Manuf') or (stage_list[j]['StageType'] == 'Trans')):
-		stage_list[j]['HoldingCost'] = stage_list[j]['HoldingCost']*0.1
+		stage_list[j]['HoldingCost'] = round(stage_list[j]['HoldingCost']*0.1,2)
 	elif ((stage_list[j]['StageType'] == 'Retail') or (stage_list[j]['StageType'] == 'Dist')):
-		stage_list[j]['HoldingCost'] = stage_list[j]['HoldingCost']*0.2
+		stage_list[j]['HoldingCost'] = round(stage_list[j]['HoldingCost']*0.2,2)
 #print(stage_list)
 
 #define objective function
@@ -193,10 +193,10 @@ while (1):
 		print('Objective value =', solver.Objective().Value())
 	else:
 		print('The problem does not have an optimal solution.')
-		print('\nAdvanced usage:')
-		print('Problem solved in %f milliseconds' % solver.wall_time())
-		print('Problem solved in %d iterations' % solver.iterations())
-		print('Problem solved in %d branch-and-bound nodes' % solver.nodes())
+	print('\nAdvanced usage:')
+	print('Problem solved in %f milliseconds' % solver.wall_time())
+	print('Problem solved in %d iterations' % solver.iterations())
+	print('Problem solved in %d branch-and-bound nodes' % solver.nodes())
 
 	# termination criterion
 	flag = 0
@@ -247,8 +247,8 @@ while (1):
 
 # output result to csv: Excel Data + SI, S, obj, real obj value, number of iterations
 for j in range (N):
-	stage_list[j]['InboundServiceTime'] = SI[j].solution_value()
-	stage_list[j]['OutboundServiceTime'] = S[j].solution_value()
+	stage_list[j]['InboundServiceTime'] = round(SI[j].solution_value())
+	stage_list[j]['OutboundServiceTime'] = round(S[j].solution_value())
 	stage_list[j]['SafetyInventoryCost'] = stage_list[j]['HoldingCost']*Phi(j,round(X[j].solution_value(),2))
 	phi_temp = 0
 	for r in range (R[j]-1):
@@ -258,7 +258,7 @@ for j in range (N):
 	stage_list[j]['ObjValueGap'] = stage_list[j]['HoldingCost']*(Phi(j,round(X[j].solution_value(),2))-phi_temp)
 	stage_list[j]['IteNum'] = iteration_index
 df = pd.DataFrame(stage_list)
-df.to_csv(datapath.split('.')[0]+"Result.csv")
+df.to_csv(datapath.split('.')[0].split('-')[0]+"-Result.csv")
 
 # export to json
 jsdata = {'results': [{'columns':['user', 'entity'],'data':[{'graph': {'nodes':[],'relationships':[]}}]}],'errors':[]}
@@ -299,7 +299,7 @@ for j in range (N):
 																	'type': str(round(stage_list[j]['OutboundServiceTime'])),
 																	'startNode': str(j),
 																	'endNode': str(i),
-																	'properties': {'Service Time': round(stage_list[j]['OutboundServiceTime'])}
+																	'properties': {'Outbound Service Time '+str(j)+' -> '+str(i): round(stage_list[j]['OutboundServiceTime'])}
 																	})
 		rela_index += 1
 

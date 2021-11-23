@@ -16,8 +16,8 @@
                 ],
                 "properties": {
                   "Stage Name": "Dist_0001",
-                  "Holding Cost": 130,
-                  "Average Demand": 140.0,
+                  "Holding Cost": 550,
+                  "Average Demand": 70.0,
                   "Demand Std Dev.": 35.0,
                   "Max Service Time": 0.0,
                   "Service Level": 0.95,
@@ -27,7 +27,7 @@
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 4322.5
+                  "Safety Inventory Cost": 18287.5
                 }
               },
               {
@@ -37,7 +37,7 @@
                 ],
                 "properties": {
                   "Stage Name": "Dist_0002",
-                  "Holding Cost": 40,
+                  "Holding Cost": 821,
                   "Average Demand": 126.0,
                   "Demand Std Dev.": 132.3,
                   "Max Service Time": 0.0,
@@ -52,7 +52,7 @@
                       0.2
                     ]
                   ],
-                  "Safety Inventory Cost": 43596.42
+                  "Safety Inventory Cost": 111681.27
                 }
               },
               {
@@ -62,7 +62,7 @@
                 ],
                 "properties": {
                   "Stage Name": "Dist_0003",
-                  "Holding Cost": 62,
+                  "Holding Cost": 832,
                   "Average Demand": 57.0,
                   "Demand Std Dev.": 51.3,
                   "Max Service Time": 0.0,
@@ -81,7 +81,7 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 19417.57
+                  "Safety Inventory Cost": 83915.13
                 }
               },
               {
@@ -91,7 +91,7 @@
                 ],
                 "properties": {
                   "Stage Name": "Dist_0004",
-                  "Holding Cost": 79,
+                  "Holding Cost": 849,
                   "Average Demand": 46.0,
                   "Demand Std Dev.": 45.0,
                   "Max Service Time": 0.0,
@@ -106,7 +106,7 @@
                       0.2
                     ]
                   ],
-                  "Safety Inventory Cost": 21699.33
+                  "Safety Inventory Cost": 74345.11
                 }
               },
               {
@@ -136,7 +136,7 @@
                 "properties": {
                   "Stage Name": "Manuf_0002",
                   "Holding Cost": 235,
-                  "Average Demand": 243.0,
+                  "Average Demand": 173.0,
                   "Demand Std Dev.": 76.69,
                   "Lead Time": [
                     [
@@ -154,7 +154,7 @@
                 ],
                 "properties": {
                   "Stage Name": "Manuf_0003",
-                  "Holding Cost": 185,
+                  "Holding Cost": 395,
                   "Average Demand": 126.0,
                   "Demand Std Dev.": 132.3,
                   "Lead Time": [
@@ -163,7 +163,7 @@
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 0.0
+                  "Safety Inventory Cost": 243397.37
                 }
               },
               {
@@ -173,7 +173,7 @@
                 ],
                 "properties": {
                   "Stage Name": "Manuf_0004",
-                  "Holding Cost": 181,
+                  "Holding Cost": 391,
                   "Average Demand": 103.0,
                   "Demand Std Dev.": 68.24,
                   "Lead Time": [
@@ -182,7 +182,7 @@
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 0.0
+                  "Safety Inventory Cost": 87852.02
                 }
               },
               {
@@ -209,7 +209,7 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 9649.38
+                  "Safety Inventory Cost": 46250.29
                 }
               },
               {
@@ -220,7 +220,7 @@
                 "properties": {
                   "Stage Name": "Part_0002",
                   "Holding Cost": 30,
-                  "Average Demand": 369.0,
+                  "Average Demand": 299.0,
                   "Demand Std Dev.": 152.92,
                   "Lead Time": [
                     [
@@ -232,7 +232,7 @@
                       0.5
                     ]
                   ],
-                  "Safety Inventory Cost": 8439.74
+                  "Safety Inventory Cost": 26553.65
                 }
               },
               {
@@ -243,7 +243,7 @@
                 "properties": {
                   "Stage Name": "Part_0003",
                   "Holding Cost": 20,
-                  "Average Demand": 369.0,
+                  "Average Demand": 299.0,
                   "Demand Std Dev.": 152.92,
                   "Lead Time": [
                     [
@@ -259,7 +259,7 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 3724.06
+                  "Safety Inventory Cost": 21234.15
                 }
               },
               {
@@ -270,7 +270,7 @@
                 "properties": {
                   "Stage Name": "Part_0004",
                   "Holding Cost": 55,
-                  "Average Demand": 243.0,
+                  "Average Demand": 173.0,
                   "Demand Std Dev.": 76.69,
                   "Lead Time": [
                     [
@@ -286,7 +286,7 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 6860.77
+                  "Safety Inventory Cost": 20273.91
                 }
               },
               {
@@ -313,7 +313,7 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 18159.54
+                  "Safety Inventory Cost": 58730.52
                 }
               },
               {
@@ -323,7 +323,7 @@
                 ],
                 "properties": {
                   "Stage Name": "Trans_0001",
-                  "Holding Cost": 30,
+                  "Holding Cost": 240,
                   "Average Demand": 126.0,
                   "Demand Std Dev.": 132.3,
                   "Lead Time": [
@@ -380,8 +380,8 @@
                 ],
                 "properties": {
                   "Stage Name": "Trans_0004",
-                  "Holding Cost": 25,
-                  "Average Demand": 243.0,
+                  "Holding Cost": 235,
+                  "Average Demand": 173.0,
                   "Demand Std Dev.": 76.69,
                   "Lead Time": [
                     [
@@ -389,153 +389,153 @@
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 14342.03
+                  "Safety Inventory Cost": 59310.71
                 }
               }
             ],
             "relationships": [
               {
                 "id": "0",
-                "type": "62",
+                "type": "12",
                 "startNode": "4",
                 "endNode": "13",
                 "properties": {
-                  "Service Time": 62
+                  "Outbound Service Time 4 -> 13": 12
                 }
               },
               {
                 "id": "1",
-                "type": "60",
+                "type": "10",
                 "startNode": "5",
                 "endNode": "16",
                 "properties": {
-                  "Service Time": 60
+                  "Outbound Service Time 5 -> 16": 10
                 }
               },
               {
                 "id": "2",
-                "type": "74",
+                "type": "0",
                 "startNode": "6",
                 "endNode": "1",
                 "properties": {
-                  "Service Time": 74
+                  "Outbound Service Time 6 -> 1": 0
                 }
               },
               {
                 "id": "3",
-                "type": "37",
+                "type": "0",
                 "startNode": "7",
                 "endNode": "2",
                 "properties": {
-                  "Service Time": 37
+                  "Outbound Service Time 7 -> 2": 0
                 }
               },
               {
                 "id": "4",
-                "type": "37",
+                "type": "0",
                 "startNode": "7",
                 "endNode": "3",
                 "properties": {
-                  "Service Time": 37
+                  "Outbound Service Time 7 -> 3": 0
                 }
               },
               {
                 "id": "5",
-                "type": "40",
+                "type": "0",
                 "startNode": "8",
                 "endNode": "4",
                 "properties": {
-                  "Service Time": 40
+                  "Outbound Service Time 8 -> 4": 0
                 }
               },
               {
                 "id": "6",
-                "type": "30",
+                "type": "0",
                 "startNode": "9",
                 "endNode": "4",
                 "properties": {
-                  "Service Time": 30
+                  "Outbound Service Time 9 -> 4": 0
                 }
               },
               {
                 "id": "7",
-                "type": "30",
+                "type": "0",
                 "startNode": "9",
                 "endNode": "5",
                 "properties": {
-                  "Service Time": 30
+                  "Outbound Service Time 9 -> 5": 0
                 }
               },
               {
                 "id": "8",
-                "type": "50",
+                "type": "0",
                 "startNode": "10",
                 "endNode": "4",
                 "properties": {
-                  "Service Time": 50
+                  "Outbound Service Time 10 -> 4": 0
                 }
               },
               {
                 "id": "9",
-                "type": "50",
+                "type": "0",
                 "startNode": "10",
                 "endNode": "5",
                 "properties": {
-                  "Service Time": 50
+                  "Outbound Service Time 10 -> 5": 0
                 }
               },
               {
                 "id": "10",
-                "type": "20",
+                "type": "0",
                 "startNode": "11",
                 "endNode": "5",
                 "properties": {
-                  "Service Time": 20
+                  "Outbound Service Time 11 -> 5": 0
                 }
               },
               {
                 "id": "11",
-                "type": "25",
+                "type": "0",
                 "startNode": "12",
                 "endNode": "14",
                 "properties": {
-                  "Service Time": 25
+                  "Outbound Service Time 12 -> 14": 0
                 }
               },
               {
                 "id": "12",
-                "type": "25",
+                "type": "0",
                 "startNode": "12",
                 "endNode": "15",
                 "properties": {
-                  "Service Time": 25
+                  "Outbound Service Time 12 -> 15": 0
                 }
               },
               {
                 "id": "13",
-                "type": "64",
+                "type": "14",
                 "startNode": "13",
                 "endNode": "6",
                 "properties": {
-                  "Service Time": 64
+                  "Outbound Service Time 13 -> 6": 14
                 }
               },
               {
                 "id": "14",
-                "type": "27",
+                "type": "2",
                 "startNode": "14",
                 "endNode": "6",
                 "properties": {
-                  "Service Time": 27
+                  "Outbound Service Time 14 -> 6": 2
                 }
               },
               {
                 "id": "15",
-                "type": "27",
+                "type": "2",
                 "startNode": "15",
                 "endNode": "7",
                 "properties": {
-                  "Service Time": 27
+                  "Outbound Service Time 15 -> 7": 2
                 }
               },
               {
@@ -544,7 +544,7 @@
                 "startNode": "16",
                 "endNode": "7",
                 "properties": {
-                  "Service Time": 0
+                  "Outbound Service Time 16 -> 7": 0
                 }
               },
               {
@@ -553,7 +553,7 @@
                 "startNode": "16",
                 "endNode": "0",
                 "properties": {
-                  "Service Time": 0
+                  "Outbound Service Time 16 -> 0": 0
                 }
               }
             ]
