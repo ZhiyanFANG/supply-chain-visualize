@@ -1,48 +1,82 @@
 # supply-chain-visualization
 
-![web-page](https://github.com/FzyEstelle/supply-chain-visualization/blob/main/SC1-Snapshot.png)
-A simple web app to assign service times to supply chains based on its structure, stage costs, stage times and demand distributions, and visualize the supply chain on web locally.
+![web-page](https://github.com/FzyEstelle/supply-chain-visualization/blob/main/demo.png)
+This project designs a tool that is able to optimize supply chain inventory placement and visualize the optimal supply chain. Specifically, it 
 
-Input file sample: `SC-Form.xls` (source: Sean P. Willams, 2007: https://pubsonline.informs.org/doi/suppl/10.1287/msom.1070.0176).
+1) reads input supply chain data, 
 
-Optimization model and algorithm: Magnanti, et al., 2006 (https://www.sciencedirect.com/science/article/abs/pii/S0167637705000477).
+2) conduct optimization according to the famous inventory placement model of Graves and Willems (2003), 
 
-Note that both stage time and demand can be random, which makes our model slightly different from that above.
+3) solve the model based on the algorithm of Magnanti, et al. (2005), 
+
+and 4) visualize the supply chain along with its properties on a local web page.
+
+We hope that through this tool, 
+Using this tool, it is easy to adjust a supply chain and observe the corresponding optimized inventory placement intuitively. 
+
+| File | Notes |
+| ------ | ------ |
+| `SC-Form.xls` | |
+| `DataHandler.py` | |
+| `SC-Result.csv` | |
+| `visualization/docs/json/neo4jData.json` | |
+| `visualization/docs/index.html` | |
+
+This project is part of the Master Thesis of Zhiyan FANG, Institute of Operations Research and Analytics, National University of Singapore.
+
+## Optimization Model And Algorithm
+
+* Assume that if a stage receiving products from more than one manufacturer, all those manufacturers produce the same product.
+
+* Holding cost calculation
+
+* Demand calculation
+
+* Random Lead Time
+
+slightly different from Graves and Willems
+
+slightly different from Magnanti, et al., 2006 (https://www.sciencedirect.com/science/article/abs/pii/S0167637705000477)
+
+others:
+stop criterion: 0.02 of real obj value; M=100; max number of iteration=1000 to avoid dead loop
+
 
 ## User Guide
 
-### Preparation
+### Data Input And Optimization
+
+* Write your supply chain data into the file 'SC-Form.xls' according to the following formation:
+
+* Run `DataHandler.py` to read `Excel` data, optimize the inventory placement model and output model solutions for visualization:
+
+   ```bash
+   > cd your-directory/supply-chain-visualization
+   > python3 DataHandler.py
+   ```
+
+   where the visualization data file `neo4jData.json` is placed under `visualization/docs/json`, and output csv
+
+### Visualization
 
 * Download and install NodeJS.
 * Download Gem on its official website and conduct environment settings.
 * Install gulp and downgrade gulp to version 10.
-
-### Data Input
-
-* Write your supply chain data into the file 'SC-Form.xls' according to the following formation:
-
----
-
-* Run the web app:
+* Run:
 
    ```bash
-   > cd <your directory>/supply-chain-visualization
-   > python3 DataHandler.py
    > cd visualization
    > gem install sass
    > npm install
    > gulp
    ```
 
-   and open your browser to the web `http://localhost:8080`.
+   and open `http://localhost:8080` in your browser.
 
-## Important Notes
-
-1. Assume that if a stage receiving products from more than one manufacturer, all those manufacturers produce the same product;
-
-2. It may cause faults if StageId in the input excel is not in order.
 
 ## Reference
+
+* Input file sample: Sean P. Willems, 2007: https://pubsonline.informs.org/doi/suppl/10.1287/msom.1070.0176.
 
 * All visualization codes are based on https://github.com/eisman/neo4jd3.
 

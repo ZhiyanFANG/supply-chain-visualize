@@ -27,7 +27,8 @@
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 18287.5
+                  "Expected Safety Inventory": 33.25,
+                  "Expected Safety Inventory Cost": 18287.5
                 }
               },
               {
@@ -52,7 +53,8 @@
                       0.2
                     ]
                   ],
-                  "Safety Inventory Cost": 111681.27
+                  "Expected Safety Inventory": 136.1,
+                  "Expected Safety Inventory Cost": 111681.27
                 }
               },
               {
@@ -81,7 +83,8 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 83915.13
+                  "Expected Safety Inventory": 100.81,
+                  "Expected Safety Inventory Cost": 83915.13
                 }
               },
               {
@@ -106,7 +109,8 @@
                       0.2
                     ]
                   ],
-                  "Safety Inventory Cost": 74345.11
+                  "Expected Safety Inventory": 87.52,
+                  "Expected Safety Inventory Cost": 74345.11
                 }
               },
               {
@@ -119,13 +123,16 @@
                   "Holding Cost": 240,
                   "Average Demand": 126.0,
                   "Demand Std Dev.": 132.3,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       12.0,
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 0.0
+                  "Expected Safety Inventory": 0.0,
+                  "Expected Safety Inventory Cost": 0.0
                 }
               },
               {
@@ -138,13 +145,16 @@
                   "Holding Cost": 235,
                   "Average Demand": 173.0,
                   "Demand Std Dev.": 76.69,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       10.0,
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 0.0
+                  "Expected Safety Inventory": 0.0,
+                  "Expected Safety Inventory Cost": 0.0
                 }
               },
               {
@@ -157,13 +167,16 @@
                   "Holding Cost": 395,
                   "Average Demand": 126.0,
                   "Demand Std Dev.": 132.3,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       10.0,
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 243397.37
+                  "Expected Safety Inventory": 615.73,
+                  "Expected Safety Inventory Cost": 243397.37
                 }
               },
               {
@@ -176,13 +189,16 @@
                   "Holding Cost": 391,
                   "Average Demand": 103.0,
                   "Demand Std Dev.": 68.24,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       10.0,
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 87852.02
+                  "Expected Safety Inventory": 224.57,
+                  "Expected Safety Inventory Cost": 87852.02
                 }
               },
               {
@@ -195,6 +211,8 @@
                   "Holding Cost": 55,
                   "Average Demand": 126.0,
                   "Demand Std Dev.": 132.3,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       40.0,
@@ -209,7 +227,8 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 46250.29
+                  "Expected Safety Inventory": 840.91,
+                  "Expected Safety Inventory Cost": 46250.29
                 }
               },
               {
@@ -222,6 +241,8 @@
                   "Holding Cost": 30,
                   "Average Demand": 299.0,
                   "Demand Std Dev.": 152.92,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       30.0,
@@ -232,7 +253,8 @@
                       0.5
                     ]
                   ],
-                  "Safety Inventory Cost": 26553.65
+                  "Expected Safety Inventory": 885.12,
+                  "Expected Safety Inventory Cost": 26553.65
                 }
               },
               {
@@ -245,6 +267,8 @@
                   "Holding Cost": 20,
                   "Average Demand": 299.0,
                   "Demand Std Dev.": 152.92,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       50.0,
@@ -259,7 +283,8 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 21234.15
+                  "Expected Safety Inventory": 1061.71,
+                  "Expected Safety Inventory Cost": 21234.15
                 }
               },
               {
@@ -272,6 +297,8 @@
                   "Holding Cost": 55,
                   "Average Demand": 173.0,
                   "Demand Std Dev.": 76.69,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       20.0,
@@ -286,7 +313,8 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 20273.91
+                  "Expected Safety Inventory": 368.62,
+                  "Expected Safety Inventory Cost": 20273.91
                 }
               },
               {
@@ -299,6 +327,8 @@
                   "Holding Cost": 75,
                   "Average Demand": 229.0,
                   "Demand Std Dev.": 148.86,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       25.0,
@@ -313,7 +343,8 @@
                       0.1
                     ]
                   ],
-                  "Safety Inventory Cost": 58730.52
+                  "Expected Safety Inventory": 783.07,
+                  "Expected Safety Inventory Cost": 58730.52
                 }
               },
               {
@@ -326,13 +357,16 @@
                   "Holding Cost": 240,
                   "Average Demand": 126.0,
                   "Demand Std Dev.": 132.3,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       2.0,
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 0.0
+                  "Expected Safety Inventory": 0.0,
+                  "Expected Safety Inventory Cost": 0.0
                 }
               },
               {
@@ -345,13 +379,16 @@
                   "Holding Cost": 150,
                   "Average Demand": 126.0,
                   "Demand Std Dev.": 132.3,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       2.0,
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 0.0
+                  "Expected Safety Inventory": 0.0,
+                  "Expected Safety Inventory Cost": 0.0
                 }
               },
               {
@@ -364,13 +401,16 @@
                   "Holding Cost": 150,
                   "Average Demand": 103.0,
                   "Demand Std Dev.": 68.24,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       2.0,
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 0.0
+                  "Expected Safety Inventory": 0.0,
+                  "Expected Safety Inventory Cost": 0.0
                 }
               },
               {
@@ -383,13 +423,16 @@
                   "Holding Cost": 235,
                   "Average Demand": 173.0,
                   "Demand Std Dev.": 76.69,
+                  "Service Level": 0.95,
+                  "Max Service Time": null,
                   "Lead Time": [
                     [
                       2.0,
                       1.0
                     ]
                   ],
-                  "Safety Inventory Cost": 59310.71
+                  "Expected Safety Inventory": 252.39,
+                  "Expected Safety Inventory Cost": 59310.71
                 }
               }
             ],

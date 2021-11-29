@@ -59,48 +59,81 @@ epslion_percent = 0.02
 MAX_ITE = 1000
 M = 100
 
-# calculate demand
-demand_cal_list = []
-for j in range (N):
-	if (stage_list[j]['UpstreamStage'] is None):
-		demand_cal_list.append(j)
-while (len(demand_cal_list) != N):
-	for j in range (N):
-		if ((stage_list[j]['avgDemand'] == 0) or (j in demand_cal_list)):
-			continue
-		cost_per_sum = 0
-		for i in stage_list[j]['UpstreamStage']:
-			if (stage_list[i]['StageType'] == 'Manuf'):
-				cost_per_sum += 1/stage_list[i]['StageCost']
-		for i in stage_list[j]['UpstreamStage']:
-			if (stage_list[i]['StageType'] != 'Manuf'):
-				stage_list[i]['avgDemand'] += stage_list[j]['avgDemand']
-				stage_list[i]['stdDevDemand'] = math.sqrt(stage_list[i]['stdDevDemand']**2+stage_list[j]['stdDevDemand']**2)
-			else:
-				stage_list[i]['avgDemand'] += stage_list[j]['avgDemand']*(1/stage_list[i]['StageCost']/cost_per_sum)
-				stage_list[i]['stdDevDemand'] = math.sqrt(stage_list[i]['stdDevDemand']**2\
-					+(stage_list[j]['stdDevDemand']*((1/stage_list[i]['StageCost']/cost_per_sum)**2))**2)
-		demand_cal_list.append(j)
+# if the former paths of the two stages are the same
+def comparepath(stage1, stage2):
+	if (stage_list[stage1]['RelDepth'] != stage_list[stage2]['RelDepth']):
+		return False
+	if (stage1 == stage2):
+		return True
+	if (stage_list[stage1]['UpstreamStage'] is None):
+		return False
+	if (stage_list[stage2]['UpstreamStage'] is None):
+		return False
+	for i in stage_list[stage1]['UpstreamStage']:
+		for j in stage_list[stage2]['UpstreamStage']:
+			if ((comparepath(i,j) == False) or (stage_list[i]['StageType'] != stage_list[j]['StageType'])):
+				return False
+	return True
 
-# calculate holding cost
+# a list of suppliers, where the suppliers of the same path are categorized to the same list
+def distribute(stage):
+	distr = [[stage_list[stage]['UpstreamStage'][0]]]
+	if (len(stage_list[stage]['UpstreamStage']) <= 1):
+		return distr
+	for i in stage_list[stage]['UpstreamStage'][1:]:
+		distr_flag = 0
+		for j in range (len(distr)):
+			if (comparepath(i,distr[j][0]) == True):
+				distr[j].append(i)
+				distr_flag = 1
+		if (distr_flag == 0):
+			distr.append([i])
+	return(distr)
+
+# max depth of the supply chain
 max_depth = 0
 for j in range (N):
 	if (stage_list[j]['RelDepth'] > max_depth):
 		max_depth = stage_list[j]['RelDepth']
+
+# calculate demand
+current_depth = 0
+while (current_depth < max_depth):
+	for j in range (N):
+		if ((stage_list[j]['RelDepth'] != current_depth) or (stage_list[j]['UpstreamStage'] is None)):
+			continue
+		distr_list = distribute(j)
+		for i in range (len(distr_list)):
+			if (len(distr_list[i]) == 1):
+				stage_list[distr_list[i][0]]['avgDemand'] += stage_list[j]['avgDemand']
+				stage_list[distr_list[i][0]]['stdDevDemand'] = math.sqrt(stage_list[distr_list[i][0]]['stdDevDemand']**2\
+																												+stage_list[j]['stdDevDemand']**2)
+			else:
+				cost_per_sum = 0
+				for ci in distr_list[i]:
+					cost_per_sum += 1/stage_list[ci]['StageCost']
+				for ci in distr_list[i]:
+					stage_list[ci]['avgDemand'] += stage_list[j]['avgDemand']*(1/stage_list[ci]['StageCost']/cost_per_sum)
+					stage_list[ci]['stdDevDemand'] = math.sqrt(stage_list[ci]['stdDevDemand']**2\
+																						+(stage_list[j]['stdDevDemand']*((1/stage_list[ci]['StageCost']/cost_per_sum)**2))**2)
+	current_depth += 1
+
+# calculate holding cost
 current_depth = max_depth - 1
 while (current_depth >= 0):
 	for j in range (N):
 		if ((stage_list[j]['RelDepth'] != current_depth) or (stage_list[j]['UpstreamStage'] is None)):
 			continue
-		cost_per_sum = 0
-		for i in stage_list[j]['UpstreamStage']:
-			if (stage_list[i]['StageType'] == 'Manuf'):
-				cost_per_sum += 1/stage_list[i]['StageCost']
-		for i in stage_list[j]['UpstreamStage']:
-			if (stage_list[i]['StageType'] != 'Manuf'):
-				stage_list[j]['HoldingCost'] += stage_list[i]['HoldingCost']
+		distr_list = distribute(j)
+		for i in range (len(distr_list)):
+			if (len(distr_list[i]) == 1):
+				stage_list[j]['HoldingCost'] += stage_list[distr_list[i][0]]['HoldingCost']
 			else:
-				stage_list[j]['HoldingCost'] += stage_list[i]['HoldingCost']*(1/stage_list[i]['StageCost']/cost_per_sum)
+				cost_per_sum = 0
+				for ci in distr_list[i]:
+					cost_per_sum += 1/stage_list[ci]['StageCost']
+				for ci in distr_list[i]:
+					stage_list[j]['HoldingCost'] += stage_list[ci]['HoldingCost']*(1/stage_list[ci]['StageCost']/cost_per_sum)
 	current_depth -= 1
 for j in range (N):
 	if (stage_list[j]['StageType'] == 'Part'):
@@ -250,6 +283,7 @@ for j in range (N):
 	stage_list[j]['InboundServiceTime'] = round(SI[j].solution_value())
 	stage_list[j]['OutboundServiceTime'] = round(S[j].solution_value())
 	stage_list[j]['SafetyInventoryCost'] = stage_list[j]['HoldingCost']*Phi(j,round(X[j].solution_value(),2))
+	stage_list[j]['SafetyInventory'] = Phi(j,round(X[j].solution_value(),2))
 	phi_temp = 0
 	for r in range (R[j]-1):
 		phi_temp += f_list[j][r]*u[j][r].solution_value()+alpha_list[j][r]*z[j][r].solution_value()\
@@ -274,7 +308,8 @@ for j in range (N):
 																																'Max Service Time': stage_list[j]['maxServiceTime'],
 																																'Service Level': stage_list[j]['ServiceLevel'],
 																																'Lead Time': stage_list[j]['StageTime'],
-																																'Safety Inventory Cost': round(stage_list[j]['SafetyInventoryCost'],2)
+																																'Expected Safety Inventory': round(stage_list[j]['SafetyInventory'],2),
+																																'Expected Safety Inventory Cost': round(stage_list[j]['SafetyInventoryCost'],2)
 																															}
 																															})
 	else:
@@ -285,8 +320,11 @@ for j in range (N):
 																																'Holding Cost': round(stage_list[j]['HoldingCost']),
 																																'Average Demand': round(stage_list[j]['avgDemand'],2),
 																																'Demand Std Dev.': round(stage_list[j]['stdDevDemand'],2),
+																																'Service Level': stage_list[j]['ServiceLevel'],
+																																'Max Service Time': stage_list[j]['maxServiceTime'],
 																																'Lead Time': stage_list[j]['StageTime'],
-																																'Safety Inventory Cost': round(stage_list[j]['SafetyInventoryCost'],2)
+																																'Expected Safety Inventory': round(stage_list[j]['SafetyInventory'],2),
+																																'Expected Safety Inventory Cost': round(stage_list[j]['SafetyInventoryCost'],2)
 																															}
 																															})
 
