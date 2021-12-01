@@ -1,6 +1,6 @@
 # supply-chain-visualization
 
-![demo](https://github.com/ZhiyanFANG/supply-chain-visualize/blob/main/demo.png)
+![demo](https://github.com/ZhiyanFANG/supply-chain-visualize/demo.png)
 This project designs an interactive tool inspired by the industrial supply chain applications. Through this tool, users are able to optimize the guaranteed service inventory placement with random lead times, and visualize the optimized supply chain on a local web page. We hope this will help to clarify complicated relationships within a supply chain, and to identify the weak link - the specific stages in the supply chain need extra attention.
 
 | File | Functions |
