@@ -1,6 +1,6 @@
 # supply-chain-visualization
 
-![web-page](https://github.com/ZhiyanFANG/supply-chain-visualization/blob/main/demo.png)
+![demo](https://github.com/ZhiyanFANG/supply-chain-visualize/blob/main/demo.png)
 This project designs an interactive tool inspired by the industrial supply chain applications. Through this tool, users are able to optimize the guaranteed service inventory placement with random lead times, and visualize the optimized supply chain on a local web page. We hope this will help to clarify complicated relationships within a supply chain, and to identify the weak link - the specific stages in the supply chain need extra attention.
 
 | File | Functions |
@@ -29,7 +29,7 @@ This project is part of the Master Thesis of Zhiyan FANG, Institute of Operation
 | stdDevDemand | Standard deviation of the stage, from external customers | `132.3` |
 | maxServiceTime | Maximum outbound service time of the stage, to external customers | `0` |
 | ServiceLevel | Service level of the stage, to external customers | `0.95` |
-| StageTime | Lead time distribution of the stage: time1,possibility1;time2,possibility2;... | `1,0.8;2,0.2` |
+| StageTime | Lead time distribution of the stage: `time1,possibility1;time2,possibility2;...` | `1,0.8;2,0.2` |
 | DownstreamStage | List of its downstream stages | `2,3` |
 | UpstreamStage | List of its upstream stages | `15,16` |
 
@@ -42,7 +42,7 @@ This project is part of the Master Thesis of Zhiyan FANG, Institute of Operation
 
 * The file `SC-Result.csv` is generated automatically, with the following features.
 
-| | Feature | Explanation | Example | 
+| Feature | Explanation | Example | 
 | ------ | ------ | ------ |
 | StageId | Id of the stage | `1` |
 | StageName | Name of the stage | `Dist_002` |
@@ -54,7 +54,7 @@ This project is part of the Master Thesis of Zhiyan FANG, Institute of Operation
 | stdDevDemand | Standard deviation of the stage, calcualted for all stages | `132.3` |
 | maxServiceTime | Maximum outbound service time of the stage, to external customers | `0` |
 | ServiceLevel | Service level of the stage, set for all stages | `0.95` |
-| StageTime | Lead time distribution of the stage: [[time1,possibility1],[time2,possibility2],...] | `[[1,0.8],[2,0.2]]` |
+| StageTime | Lead time distribution of the stage: `[[time1,possibility1],[time2,possibility2],...]` | `[[1,0.8],[2,0.2]]` |
 | DownstreamStage | List of its downstream stages | `[2,3]` |
 | UpstreamStage | List of its upstream stages | `[15,16]` |
 | InboundServiceTime | Optimized inbound service time of the stage | `0` |
@@ -88,4 +88,5 @@ This project is part of the Master Thesis of Zhiyan FANG, Institute of Operation
 
 * All visualization codes are based on `https://github.com/eisman/neo4jd3`.
 
-* Solver: Google OR-Tools, `https://developers.google.com/optimization`; SCIP, `https://www.scipopt.org/index.php#license`.
+* Solver: Google OR-Tools, `https://developers.google.com/optimization`;
+            SCIP, `https://www.scipopt.org/index.php#license`.
